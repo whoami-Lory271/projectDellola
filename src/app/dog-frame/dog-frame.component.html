@@ -1,0 +1,20 @@
+<h2>My dogs</h2>
+<ul class="dogs">
+  <li *ngFor="let dog of dogs">
+    <button [class.selected]="dog === selectedDog" type="button" (click)="onSelect(dog)">
+      <span class="badge">{{dog.id}}</span>
+      <span class="name">{{dog.dog_name}}</span>
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="selectedDog">
+  <h2>{{selectedDog.dog_name | uppercase}} Details</h2>
+  <div>id: {{selectedDog.id}}</div>
+  <div>
+    <label for="dog-name">Dog name: </label>
+    <input id="dog-name" [(ngModel)]="selectedDog.dog_name" placeholder="name">
+    <img src="https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg"
+         width="200" height="auto">
+  </div>
+</div>
