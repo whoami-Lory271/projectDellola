@@ -6,11 +6,13 @@ import { NgOptimizedImage } from '@angular/common'
 import { AppComponent } from './app.component';
 import { DogFrameComponent } from './dog-frame/dog-frame.component';
 import {FormsModule} from "@angular/forms";
+import { DogDetailComponent } from './dog-detail/dog-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DogFrameComponent
+    DogFrameComponent,
+    DogDetailComponent
   ],
   imports: [
     BrowserModule,
